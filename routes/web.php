@@ -34,6 +34,8 @@ Route::group(['prefix'=>'admin'], function(){
 	});
 	Route::resource('items', 'ItemsController');
     Route::resource('enemys', 'EnemysController');
+
+    Route::get('bs','BSController@index')->name('admin.bs');
 });
 
 //rutas sencillas
