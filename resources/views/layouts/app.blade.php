@@ -9,29 +9,29 @@
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="{{ route('admin') }}">Hero Admin</a>
+    <a class="navbar-brand" href="{{ route('admin.index') }}">Hero Admin</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="{{ route('admin') }}">Home</a>
+          <a class="nav-link" aria-current="page" href="{{ route('admin.index') }}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ route('admin.heroes') }}">Heroes</a>
+          <a class="nav-link" href="{{ route('admin.heroes.index') }}">Heroes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ route('admin.items') }}">items</a>
+          <a class="nav-link" href="{{ route('items.index') }}">items</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ route('admin.enemigos') }}">Enemigos</a>
+          <a class="nav-link" href="{{ route('enemys.index') }}">Enemigos</a>
         </li>
 
     </div>
   </div>
 </nav>
-<div class="container">
+<div class="container mt-3">
   @yield('content')
 </div>
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
