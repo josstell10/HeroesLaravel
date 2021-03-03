@@ -5,13 +5,13 @@
     <h1>Simulación Batalla </h1>
 </div>
 <div class="row text-center text-white">
-    <div class="col bg-primary">
+    <div class="col-5 bg-primary">
         <h3>Hero</h3>
     </div>
-    <div class="col bg-warning">
+    <div class="col-2 bg-warning">
         <h3>VS</h3>
     </div>
-    <div class="col bg-danger">
+    <div class="col-5 bg-danger">
         <h3>Enemy</h3>
     </div>
 </div>
@@ -21,8 +21,9 @@
         </div>
     </div>
 <div class="row my-3">
-    <div class="alert alert-success" role="alert">Heroe Ataca</div>
-    <div class="alert alert-danger" role="alert">Enemigo Ataca</div>
+    @foreach($events as $event)
+        <div @if($event['Winner'] == 'Hero') class="alert alert-info" @else class="alert alert-danger" @endif role="alert">{{$event['Text']}}</div>
+    @endforeach
 </div>
 
 @endsection
