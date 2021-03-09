@@ -6,13 +6,13 @@
 </div>
 <div class="row text-center text-white">
     <div class="col-5 bg-primary">
-        <h3>Hero</h3>
+        <h3>{{$HeroName}}</h3>
     </div>
     <div class="col-2 bg-warning">
         <h3>VS</h3>
     </div>
     <div class="col-5 bg-danger">
-        <h3>Enemy</h3>
+        <h3>{{$EnemyName}}</h3>
     </div>
 </div>
     <div class="row bg-info">
@@ -22,7 +22,7 @@
     </div>
 <div class="row my-3">
     @foreach($events as $event)
-        <div @if($event['Winner'] == 'Hero') class="alert alert-info" @else class="alert alert-danger" @endif role="alert">{{$event['Text']}}</div>
+        <div class="alert @if($event['Winner'] == 'Hero')  alert-info @else alert-danger @endif " role="alert">{{$event['Text']}}</div>
     @endforeach
 </div>
 
